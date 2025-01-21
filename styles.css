@@ -4,6 +4,8 @@
   --button-color: #167bf7;
   --background: #00030c;
   --font: "Inter";
+  --button-color-hover: #0f4689;
+  --secondary-color-hover: rgba(192, 192, 192, 0.314);
 }
 
 * {
@@ -60,10 +62,18 @@ body {
   color: var(--primary-color);
 }
 
+.primary-button:hover {
+  background-color: var(--button-color-hover);
+}
+
 .secondary-button {
   background-color: transparent;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
+}
+
+.secondary-button:hover {
+  background-color: var(--secondary-color-hover);
 }
 
 .container__aviso {
@@ -123,4 +133,45 @@ body {
   font-size: 32px;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 10em 10em 5em 10em;
+}
+
+.footer__image {
+  width: fit-content;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.list__link > a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 16px;
+  display: flex;
+}
+
+.list__link > a:hover {
+  color: var(--button-color);
+}
+
+.list__link > a:active {
+  color: orange;
+}
+
+.footer__text {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 400;
 }
